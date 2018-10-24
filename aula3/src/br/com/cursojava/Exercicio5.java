@@ -12,11 +12,12 @@ public class Exercicio5 {
 		
 		Scanner teclado = new Scanner(System.in);
 		System.out.println("Digite sua idade em dias");
-		int idade = Integer.parseInt(teclado.nextLine());
-		int dias = idade;
-		int meses = idade/12;
-		int anos = idade/365;
-		System.out.println("Sua idade em dias:"+dias +"\nEm meses: " +meses+"\nEm anos: "+anos);
+		int idadeDias = Integer.parseInt(teclado.nextLine());
+		int anos = idadeDias / 360;
+		int resto = idadeDias % 360;
+		int meses = resto/30;
+		int dias = resto % 30;
+		System.out.printf("Sua idade é: %d anos %d meses e %d dias" , anos, meses, dias);
 		teclado.close();
 		
 	}
